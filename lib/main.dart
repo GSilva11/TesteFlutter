@@ -15,50 +15,71 @@ class TelaPrincipal extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Teste'),
-        foregroundColor: Colors.white70,
-        backgroundColor: Colors.blue,
+        title: const Text('Computer Store'),
+        foregroundColor: Colors.white,
       ),
-      body: Container(
-        child: Image.network(
-          'https://img.freepik.com/vetores-gratis/design-de-banner-de-fundo-profissional-de-negocios-abstrato-multiuso_1340-16858.jpg',
-          fit: BoxFit.fill,
-          height: 1000.0,
-        ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        showUnselectedLabels: false,
-        showSelectedLabels: false,
-        items: const [
-          BottomNavigationBarItem(
-              icon: Icon(Icons.home_rounded, color: Colors.white70), label: ''),
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.map_rounded,
-                color: Colors.white70,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Container(
+            child: Icon(
+              Icons.computer,
+              size: 100,
+            ),
+            margin: EdgeInsets.all(5.0),
+          ),
+          Container(
+            child: Text(
+                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley.'),
+            width: MediaQuery.of(context).size.width * 0.90,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Column(
+                children: [
+                  Icon(
+                    Icons.mouse,
+                    size: 30,
+                  ),
+                  Text('Mouse'),
+                ],
               ),
-              label: ''),
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.route_rounded,
-                color: Colors.white70,
+              Column(
+                children: [
+                  Icon(
+                    Icons.monitor,
+                    size: 30,
+                  ),
+                  Text('Monitor'),
+                ],
               ),
-              label: ''),
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.favorite_rounded,
-                color: Colors.white70,
+              Column(
+                children: [
+                  Icon(
+                    Icons.print_rounded,
+                    size: 30,
+                  ),
+                  Text('Printer'),
+                ],
               ),
-              label: ''),
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.person_rounded,
-                color: Colors.white70,
+              Column(
+                children: [
+                  Icon(
+                    Icons.tablet_mac,
+                    size: 30,
+                  ),
+                  Text('Tablet'),
+                ],
               ),
-              label: ''),
+            ],
+          ),
+          Container(
+            child: Text(
+                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley.'),
+            width: MediaQuery.of(context).size.width * 0.90,
+          ),
         ],
-        backgroundColor: Colors.blueAccent,
       ),
     );
   }
